@@ -1,8 +1,8 @@
 pipeline{
 	agent any
-		stages('one')
+		stages
 		{
-			steps {
+			stage('Build') {
 				echo "hii, this is nilesh from infostretch"
 			}
 		}

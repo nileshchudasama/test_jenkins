@@ -1,0 +1,25 @@
+pipeline{
+	agent any
+		stages('one')
+		{
+			steps {
+				echo "hii, this is nilesh from infostretch"
+			}
+		}
+		stages('Two')
+		{
+			steps {
+				input('do you want to proceed?')
+			}
+		}
+		stage('Three') {
+			when {
+				not {
+					branch "master"
+				}
+			}
+			steps {
+				echo "hello"
+			}
+		}
+}

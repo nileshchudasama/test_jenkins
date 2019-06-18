@@ -3,7 +3,9 @@ pipeline{
 		stages
 		{
 			stage('Build') {
-				echo "hii, this is nilesh from infostretch"
+					steps{
+						echo "hii, this is nilesh from infostretch"
+					}
 			}
 		}
 }

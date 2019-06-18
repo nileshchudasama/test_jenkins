@@ -4,8 +4,19 @@ pipeline{
 		{
 			stage('Build') {
 					steps{
-						echo "hii, this is nilesh from infostretch"
+						echo "Built successfully"
 					}
+			}
+			stage('Test') {
+				steps {
+					echo "Test Successfully"
+				}
+			}
+			stage('Deploy')
+			{
+				steps {
+					echo "deploy Successfully"
+				}
 			}
 		}
 }

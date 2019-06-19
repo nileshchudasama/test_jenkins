@@ -2,20 +2,22 @@ pipeline{
 	agent any
 		stages
 		{
-			stage('Build') {
-					steps{
-						echo "Built successfully"
-					}
-			}
-			stage('Test') {
-				steps {
-					echo "Test Successfully"
+		 parallel{
+				stage('Build') {
+						steps{
+							echo "Built successfully"
+						}
 				}
-			}
-			stage('Deploy')
-			{
-				steps {
-					echo "deploy Successfully"
+				stage('Test') {
+					steps {
+						echo "Test Successfully"
+					}
+				}
+				stage('Deploy')
+				{
+					steps {
+						echo "deploy Successfully"
+					}
 				}
 			}
 		}

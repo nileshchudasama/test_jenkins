@@ -4,17 +4,17 @@ pipeline{
 		{
 		stage('run test'){
 		 parallel{
-				stage('Build') {
+				stage('Build stage') {
 						steps{
 							echo "Built successfully"
 						}
 				}
-				stage('Test') {
+				stage('Testing stage') {
 					steps {
 						echo "Test Successfully"
 					}
 				}
-				stage('Deploy')
+				stage('Deploy stage')
 				{
 					steps {
 						echo "deploy Successfully"

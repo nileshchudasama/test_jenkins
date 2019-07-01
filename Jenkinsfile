@@ -1,7 +1,9 @@
 pipeline{
-	stage('check')
-	{
-		sh 'cat helloworld.sh'
+	stages{
+		stage('check')
+		{
+			sh 'cat helloworld.sh'
+		}
 	}
 }
 

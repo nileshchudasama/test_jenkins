@@ -1,27 +1,7 @@
 pipeline{
-	agent any
-		stages
-		{
-		stage('run test'){
-		 parallel{
-				stage('Build') {
-						steps{
-							echo "Built successfully"
-						}
-				}
-				stage('Test') {
-					steps {
-						echo "Test Successfully"
-					}
-				}
-				stage('Deploy')
-				{
-					steps {
-						echo "deploy Successfully"
-					}
-				}
-			}
-			}
-		}
+	stage('check')
+	{
+		sh 'cat helloworld.sh'
+	}
 }
 
